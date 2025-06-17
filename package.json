@@ -1,0 +1,8 @@
+{
+  "name": "pengingat-tugas",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0"
+  }
+}
