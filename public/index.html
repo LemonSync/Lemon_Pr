@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas Besok</title>
+</head>
+<body>
+  <h1>Daftar Tugas Besok</h1>
+  <ul id="daftar-tugas"></ul>
+
+  <script>
+    fetch('/api/get-tugas')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('daftar-tugas');
+        data.forEach(tugas => {
+          const item = document.createElement('li');
+          item.textContent = `${tugas.title} (dikumpul: ${tugas.date})`;
+          list.appendChild(item);
+        });
+      });
+  </script>
+</body>
+</html>
